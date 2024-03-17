@@ -113,7 +113,7 @@ header {
 }
 
 .movie-box .box-text span {
-    color: red;
+    color: var(--main-color)
 }
 
 .bx {
@@ -334,6 +334,7 @@ section {
 .movie-type {
     font-size: 0.938rem;
     font-weight: 500;
+    color: var(--main-color);
 }
 
 /* Swiper button */
@@ -729,6 +730,13 @@ section {
         bottom: 10rem;
         right: 2rem;
     }
+    .movie-box {
+        height: 340px;
+    }
+
+    .movies-content {
+        grid-template-columns: repeat(auto-fit, minmax(150px 1fr));
+    }
 }
 
 @media (max-width:514px) {
@@ -764,7 +772,7 @@ section {
         font-size: 0.9rem;
     }
     #movies{
-        padding: 20px;
+        padding: 5px;
     }
 }
 
@@ -832,7 +840,12 @@ section {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 1rem;
     }
-
+    .cast {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 130px));
+        gap: 1rem;
+        margin-top: 10px;
+    }
     
 }
 
@@ -880,5 +893,13 @@ section {
     }
     #popular{
         padding: 10px;
+    }
+}
+@media (max-width:290px) {
+    .cast {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 120px));
+        gap: 1rem;
+        margin-top: 10px;
     }
 }
